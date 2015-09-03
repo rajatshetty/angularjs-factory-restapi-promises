@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+    <head>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+    <h1>Master Page</h1>
+    <button ng-click="$state.transitionTo('welcome')">Welcome</button>
+    <button ng-click="$state.transitionTo('partial1')">Page1</button>
+    <button ng-click="$state.transitionTo('partial2')" >Page2</button>
+    <hr />
+
+        <div class="application-container">
+            <div ui-view class="application-view"></div>
+        </div>
+
+       <!--
+        <script type="text/ng-template" id="page1.html">
+            <div id="page1" class="pages">
+                <h2>Page 1 <small>(State 1)</small></h2>
+                
+                <p>
+                    <a class="btn btn-info" ng-click="$state.transitionTo('state2'); message='waiting for all data...'">Go to state 2</a>
+                </p>
+            
+            </div>
+        </script>
+        -->
+    <!--
+        <script type="text/ng-template" id="page2.html">
+            <div id="page2" class="pages">
+                <h2>Page 2 <small>({{$state.current.name}})</small></h2>
+                
+                <p><a a class="btn btn-info" ng-click="$state.transitionTo('state1')">Go back to state 1</a></p>
+                <div>
+                    
+                    <h2>Resource 1 Resolve: Public Gists from Github</h2>
+                    <p class="alert alert-warning" ng-show="message">{{message}}</p>
+                    <ul><li ng-repeat="gist in gists | limitTo:8">{{gist.url}}</li></ul>
+                    
+                </div>
+            </div>
+        </script>
+    -->
+    
+        <!-- Scripts -->
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src="http://code.angularjs.org/1.2.0-rc.3/angular.js"></script>
+        <script src="ui-router.js"></script>
+        <script src="http://code.angularjs.org/1.2.0-rc.3/angular-resource.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>

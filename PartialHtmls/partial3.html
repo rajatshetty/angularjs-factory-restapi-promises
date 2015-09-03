@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1 ng-init="check()">Users</h1>
+<table>
+    <th>
+    <td>ID</td>
+    <td>Title</td>
+    </th>
+    <tr ng-repeat="user in users">
+        <td>{{user.id}}</td>
+        <td>{{user.title}}</td>
+    </tr>
+</table>
+</body>
+</html>

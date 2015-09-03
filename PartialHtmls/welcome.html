@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="Add user" ng-click="addUser()" />
+<input type="button" value="Edit user" ng-click="editUser()" />
+<h1 ng-init="check()">Users</h1>
+<table>
+    <th>
+        <td>ID</td>
+    <td>Title</td>
+    </th>
+    <tr ng-repeat="post in posts">
+        <td><a ng-click="getUserInfo(post.id)">{{post.userId}}</a></td>
+        <td><a ng-click="getUserInfo(post.id)">{{post.title}}</a></td>
+        <td><input type="button" value="Delete" ng-click="deleteUser(post.userId)" /></td>
+    </tr>
+</table>
+</body>
+</html>
